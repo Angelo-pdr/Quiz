@@ -6,15 +6,20 @@ const GlobalCss = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    color: white;
-    background-color: black;
+    overflow: hidden;
   }
 
   body{
-    background-color: white;
-    color: blackk;
     max-width: 100vw;
     height: 100%;
+  }
+
+  .container{
+    max-width: 900px;
+    width: 100%;
+    max-height: 100vh;
+    height: 100%;
+    margin: .5rem auto;
   }
 `
 

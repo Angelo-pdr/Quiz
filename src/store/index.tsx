@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit'
-import QuestionReducer from './reducer/questions'
+import QuestionReducer from './reduce/questions'
 
-export const store = () => configureStore({
+export const store = configureStore({
   reducer: {
-    question: QuestionReducer
+    questions: QuestionReducer
   }
 })
 

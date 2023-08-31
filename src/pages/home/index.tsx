@@ -1,6 +1,6 @@
 import Title from "../../components/title"
 import * as C from "./styles"
-import category from "../../assets/quiz.svg"
+import category from "../../assets/quiz.png"
 import Button from "../../components/button"
 
 const Home = () => {
@@ -14,9 +14,9 @@ const Home = () => {
           dos riscos ocupacionais. Esse tipo de trabalho facilita a identificação dos perigosos
           dentro de uma planta industrial.
         </C.Paragraph>
-        <Button url="quiz">QUIZ</Button>
+        <Button type="link" url="quiz">QUIZ</Button>
       </div>
-        <C.Imagen src={category} alt="" />
+      <C.Imagen src={category} alt="" />
     </C.Container>
   )
 }
