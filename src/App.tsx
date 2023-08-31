@@ -1,11 +1,14 @@
-import Home from "./pages/home"
+import RouteQuiz from "./Routes"
 import GlobalCss from "./styles"
+import { BrowserRouter } from "react-router-dom"
 
 function App() {
-  return <>
-  <GlobalCss />
-  <Home />
-  </>
+  return (
+    <BrowserRouter>
+      <GlobalCss />
+      <RouteQuiz />
+    </BrowserRouter>
+  )
 }
 
 export default App

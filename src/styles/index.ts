@@ -6,13 +6,15 @@ const GlobalCss = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    color: white;
+    background-color: black;
   }
 
   body{
     background-color: white;
     color: blackk;
     max-width: 100vw;
-    height: 100vh;
+    height: 100%;
   }
 `
 
