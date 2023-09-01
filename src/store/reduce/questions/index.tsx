@@ -1,23 +1,12 @@
 import { createSlice,   } from '@reduxjs/toolkit'
+import questions from "../../../data/questions"
 
 type QuestionState = {
-  items: CardapioProps[]
+  questions: CardapioProps[]
 }
 
-
 const initialState: QuestionState = {
-  items: [
-    {
-      question : "epi?",
-      options: ["oi", "oi1", "oi2", "oi3"],
-      answer: "oi"
-    },
-    {
-      question : "epi1?",
-      options: ["oi", "oi1", "oi2", "oi3"],
-      answer: "oi"
-    }
-  ]
+  questions
 }
 const QuestionSlice = createSlice({
   name: "questions",

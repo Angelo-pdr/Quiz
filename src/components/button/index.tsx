@@ -3,10 +3,11 @@ import {BotaoContainer, BotaoLink}  from "./styles"
 type Props = {
   children: string
   url?: string
-  type: "link" | "button"
+  type: "link" | "button",
+  eFuction?: () => void
 }
 
-const Button = ({children, url, type}: Props ) => {
+const Button = ({children, url, type, eFuction}: Props ) => {
 
   if( type == "link"){
     return (
@@ -16,7 +17,7 @@ const Button = ({children, url, type}: Props ) => {
 
   if ( type == "button"){
     return (
-      <BotaoContainer>{children}</BotaoContainer>
+      <BotaoContainer onClick={eFuction}>{children}</BotaoContainer>
     )
   }
 }

@@ -15,9 +15,10 @@ export const Container = styled.div`
 export const Paragraph = styled.p`
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  max-width: 650px;
+  max-width: 600px;
   width: 100%;
   text-align: justify;
+  margin-left: .5rem;
 `
 export const Imagen = styled.img`
   display: block;
