@@ -7,7 +7,6 @@ export const Container = styled.div`
   background-color: transparent;
   padding: 10px;
   margin: 10px 0;
-  border-radius: 10px;
   color: ${colors.text};
 `
 export const CheckItems = styled.label`
@@ -18,7 +17,7 @@ export const CheckItems = styled.label`
   border: 2px solid ${colors.text};
   padding: .2rem .8rem;
   cursor: pointer;
-  border-radius: .3rem;
+  border-radius: .8rem;
   transform: transtion: 1.3s;
 
   &.response {
