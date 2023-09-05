@@ -1,15 +1,15 @@
 import * as C from "./styles"
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { checkAnswer } from "../../store/reduce/questions"
+import { RootState } from "../../store"
 type Props = {
-  children: string
+  option: string
   answer: string
 }
 
-const Option = ({children, answer}: Props) => {
+const Option = ({option, answer}: Props) => {
   const dispatch = useDispatch()
-  let wasSelected = true
-
+  const { answerSelectd } = useSelector((state: RootState) => state.questions)
   function selected (answer: string, Selecte: string ){
     dispatch(checkAnswer({
       answer,
@@ -18,11 +18,22 @@ const Option = ({children, answer}: Props) => {
   }
 
   return(
-    <C.Container onClick={() => selected(answer, children)}>
-      <C.CheckItems className={wasSelected ? '' : 'response'}>
-        <p>{children}</p>
-      </C.CheckItems>
-    </C.Container>
+    <>
+    {!answerSelectd ? <C.Container onClick={() => selected(answer, option)}>
+        <C.CheckItems>
+          <p>{option}</p>
+        </C.CheckItems>
+      </C.Container>
+      : (
+        <C.Container onClick={() => selected(answer, option)}>
+          <C.CheckItems className={option === answer ? 'correct' : 'wrong' }>
+            <p>{option}</p>
+          </C.CheckItems>
+        </C.Container>
+      )}
+
+
+    </>
   )
 }
 

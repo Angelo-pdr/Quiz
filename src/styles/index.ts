@@ -2,10 +2,12 @@ import { createGlobalStyle } from "styled-components"
 
 export const colors = {
   bg: '#fff',
-  text: '#CACACA',
+  white: 'white',
   hover: '#7141D9',
   button: '#5E25D9',
-  title: '#0D0D0D'
+  title: '#0D0D0D',
+  primary: '#404040',
+  correct: '#2B8C44'
 }
 
 const GlobalCss = createGlobalStyle`

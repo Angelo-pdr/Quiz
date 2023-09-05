@@ -37,7 +37,7 @@ const Quiz = () => {
        <C.CardBody>
           <C.CardBodyLeft>
               {questions[index].options.map((item) => (
-                <Tag answer={questions[index].answer} key={item}>{item}</Tag>
+                <Tag answer={questions[index].answer} key={item} option={item} />
               ))}
           </C.CardBodyLeft>
             <img src={category} alt="" />
